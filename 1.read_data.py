@@ -39,7 +39,10 @@ print(ants_dataset.__len__())
 print(len(bees_dataset))
 
 train_dataset = ants_dataset + bees_dataset
+
+# 这就是__len__方法的调用方式
 print(len(train_dataset))
 
+# 传入的参数1就是idx，所以这就是__getitem__方法的调用方式
 img, label = ants_dataset[1]
 img.show()

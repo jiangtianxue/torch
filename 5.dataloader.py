@@ -22,8 +22,13 @@ print(img.shape)
 print(target)
 
 for data in test_loader:
+    print(type(data))
+    print(len(data))
+    print(data)
     imgs, targets = data
+    print(type(imgs))
     print(imgs.shape)
+    print(imgs)
     print(targets)
 
 for i in range(epoch):
