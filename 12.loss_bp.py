@@ -73,9 +73,9 @@ loss = CrossEntropyLoss()
 for data in train_dataloader:
     imgs, targets = data
     outputs = module(imgs)
-    # print(outputs)
-    # print(targets)
+    # print(outputs.shape, type(outputs))
+    # print(targets.shape, type(targets))
     loss_rst = loss(outputs, targets)
-    print(loss_rst)
+    # print(loss_rst)
     # 反向传播就一句话，使用loss得到的数值，调用反向传播方法即可
     loss_rst.backward()
